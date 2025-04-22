@@ -176,15 +176,15 @@
             position: relative;
             min-height: 100vh;
         }
-        
-        .content:not(:has(.gallery-container[style*="display: grid"])):before {
+
+        .content:not(:has(.gallery-container[style*="display: grid"])):not(:has(#reportFrame[style*="display: block"])):before {
             content: '';
             position: fixed;
-            left: 220px; /* Ancho de la barra lateral */
+            left: 220px;
             right: 0;
             top: 0;
-            bottom: 40px; /* Altura del footer */
-            background-image: url('https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/ChatGPT%20Image%2022%20abr%202025,%2010_41_06%20a.m..png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vQ2hhdEdQVCBJbWFnZSAyMiBhYnIgMjAyNSwgMTBfNDFfMDYgYS5tLi5wbmciLCJpYXQiOjE3NDUzMzcyODMsImV4cCI6MTc3Njg3MzI4M30.G0ayQWMYodM81UugBSj7ia5Bc3dJzlqEvjLWlpl5JH4');
+            bottom: 40px;
+            background-image: url('https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/ChatGPT%20Image%2022%20abr%202025,%2010_41_06%20a.m..png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vQ2hhdEdQVCBJbWFnZSAyMiBhYnIgMjAyNSwgMTBfNDFfMDYgYS5tLi5wbmciLCJpYXQiOjE3NDUzMzk4ODcsImV4cCI6MTc3Njg3NTg4N30.y-0N7q1-Zsm811Smen09L_GRaJtQ7RdltsaKbSUytDc');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -218,11 +218,10 @@
             <button type="submit">Iniciar Sesión</button>
         </form>
     </div>
+
     <nav class="sidebar" id="sidebar">
         <img src="https://www.camposol.com/wp-content/themes/camposol/images/slogan.jpg" alt="Camposol Logo" style="width: 100px; height: auto; margin-bottom: 8px; display: block; margin-left: 15px;">
         <h1>CSOL PALTO</h1>
-
-
         <div class="nav-item">
             <a class="nav-link" onclick="showGallery(this)">
             semana 16.2025
@@ -233,15 +232,13 @@
             semana 15.2025
             </a>
         </div>
-
-
-    </nav>
+                    </nav>
   <main class="content" id="content">
     <div class="gallery-container" id="mi-galeria" style="display: none;">
     </div>
     <iframe id="reportFrame" src="" style="display: none;"></iframe>
     <div id="gallery-semana13" class="gallery-container">
-        <div class="gallery-item"><img src="https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/agumas%20(1).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vYWd1bWFzICgxKS5wbmciLCJpYXQiOjE3NDUzMzkzODEsImV4cCI6MTc0NzkzMTM4MX0.5ixAjhL23khTlTb9JMryZf34kyGoh2Ik2pSxa8tttCM           " alt="Imagen 1"></div>
+        <div class="gallery-item"><img src="https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/agumas%20(1).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vYWd1bWFzICgxKS5wbmciLCJpYXQiOjE3NDUyNjgyNzIsImV4cCI6MTc0Nzg2MDI3Mn0.e4tGsBNzERB-iXS_MuDHYBLpR3xn5-5KXx8QXHPXRa8           " alt="Imagen 1"></div>
         <div class="gallery-item"><img src="https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/ammavers.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vYW1tYXZlcnMucG5nIiwiaWF0IjoxNzQ1MjY4MjkyLCJleHAiOjE3NDc4NjAyOTJ9.GyKNxKoqYIrwR78ftym-A-1BGfKNDy9XMx76c0_slOk           " alt="Imagen 2"></div>
         <div class="gallery-item"><img src="https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/frusl1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vZnJ1c2wxLnBuZyIsImlhdCI6MTc0NTI2ODMxMiwiZXhwIjoxNzQ3ODYwMzEyfQ.QZdh-H9626dQ8kzEP-B2Yzfbg2y292Xpduk6jgtnEtM              " alt="Imagen 3"></div>
         <div class="gallery-item"><img src="https://glwiolevxdxxlhcxyawp.supabase.co/storage/v1/object/sign/saimon/minka.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q0NDU0YmYxLTRiN2UtNGJkMS1hZTQ2LTFlN2E4ZjhmYjY3NCJ9.eyJ1cmwiOiJzYWltb24vbWlua2EucG5nIiwiaWF0IjoxNzQ1MjY4MzI5LCJleHAiOjE3NDc4NjAzMjl9.xGGCXKr0JKcnElZ4IsR49Yi_hcXS8mfRP8d5jdKLPRo       " alt="Imagen 4"></div>
@@ -349,8 +346,8 @@
 
       if (username === VALID_USERNAME && password === VALID_PASSWORD) {
           document.getElementById('loginPage').style.display = 'none';
-          document.getElementById('sidebar').style.display = 'block';
-          document.getElementById('content').style.display = 'block';
+          document.getElementById('sidebar').classList.add('show');
+          document.getElementById('content').classList.add('show');
       } else {
           alert('Usuario o contraseña incorrectos');
       }
@@ -387,5 +384,4 @@
   });
 </script>
 </body>
-</html>
 </html>

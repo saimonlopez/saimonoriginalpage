@@ -222,27 +222,44 @@
     <nav class="sidebar" id="sidebar">
         <img src="https://www.camposol.com/wp-content/themes/camposol/images/slogan.jpg" alt="Camposol Logo" style="width: 100px; height: auto; margin-bottom: 8px; display: block; margin-left: 15px;">
         <h1>MOSCA DE LA FRUTA</h1>
-        <div class="nav-item">
-            <a class="nav-link" onclick="showGallerySaimons(this)">
-            semana 25.2025
-            </a>
+
+        <div class="nav-section">
+         <div class="nav-item">
+                      <a class="nav-link" onclick="loadReport('https://app.powerbi.com/view?r=eyJrIjoiMDRjZjZkNDEtNjE3ZC00NTM0LTgzNTYtNGFhOGY4M2E0YWI0IiwidCI6ImM4ODRjYzQyLTViMjEtNDA3Mi04YjdhLWE2M2QwYTZmNWQ3OSIsImMiOjR9')">
+                      INFORME MOSCA SIPRIVI | CULTIVOS CAMPOSOL
+                      </a>
+                      </div>
         </div>
-        <div class="nav-item">
-            <a class="nav-link" onclick="showGallerySaimon(this)">
-            semana 24.2025
-            </a>
-        </div>
-                    </nav>
+
+        
+                      <div class="nav-item">
+                      <div class="nav-section-title" onclick="toggleSubMenu(this)">▼ Mapa De Calor Moscas</div>
+                      <div class="nav-section-content">
+                          <div class="nav-item">
+                              <a class="nav-link" onclick="showGallerySaimons(this)">
+                              semana 25.2025
+                              </a>
+                          </div>
+                          <div class="nav-item">
+                              <a class="nav-link" onclick="showGallerySaimon(this)">
+                                semana 24.2025
+                              </a>
+                          </div>
+                      </div>
+
+                </div>
+
+    </nav>
   <main class="content" id="content">
     <div class="gallery-container" id="mi-galeria" style="display: none;">
     </div>
     <iframe id="reportFrame" src="" style="display: none;"></iframe>
-    <div id="gallery-saimons" class="gallery-container">
+    <div id="gallery-saimons" class="gallery-container" style="display:none;">
         <div class="gallery-item"><img src="https://i.postimg.cc/0NXXfR9Q/agromas25.png" alt="Imagen 1"></div>
         <div class="gallery-item"><img src="https://i.postimg.cc/9QVkXYxW/marverde25.png" alt="Imagen 2"></div>
         <div class="gallery-item"><img src="https://i.postimg.cc/s2g07Ddq/frusol25.png" alt="Imagen 3"></div>
         <div class="gallery-item"><img src="https://i.postimg.cc/5N8GMRS7/minka-sincromas.png" alt="Imagen 4"></div>
-        <div class="gallery-item"><img src="https://i.postimg.cc/jSXFDn9y/sincom25.png" alt="Imagen 5"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/jSXFDn9y/sincom25.png.png" alt="Imagen 5"></div>
         <div class="gallery-item"><img src="https://i.postimg.cc/dQkp51kK/terra25.png" alt="Imagen 6"></div>
     </div>
     <div id="gallery-saimon" class="gallery-container" style="display:none;">
@@ -275,6 +292,19 @@
           gallery.style.display = 'none';
       });
       document.getElementById('gallery-semana13').style.display = 'grid';
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.remove('active');
+      });
+      element.classList.add('active');
+  }
+
+  function showGallerySemana16(element) {
+      document.getElementById('reportFrame').style.display = 'none';
+      document.querySelectorAll('.gallery-container').forEach(gallery => {
+          gallery.style.display = 'none';
+      });
+      document.getElementById('gallery-semana16').style.display = 'grid';
 
       document.querySelectorAll('.nav-link').forEach(link => {
           link.classList.remove('active');
